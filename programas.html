@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Programas — Nudos de Esperanza</title>
+<meta name="description" content="Conoce los programas de Nudos de Esperanza para mujeres privadas de libertad: acompañamiento emocional, formación en oficios y reinserción familiar.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -11,124 +12,131 @@
 </head>
 <body>
 
-<!-- ============================================================ -->
-<!-- NAV SUPERIOR -->
-<!-- ============================================================ -->
 <nav class="topnav">
   <div class="wrap topnav-inner">
-    <a href="index.html" class="topnav-logo">Nudos de Esperanza</a>
+    <a href="index.html" class="topnav-logo"><svg class="logo-mark" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="30" cy="30" r="29" fill="var(--morado-tint)"/>
+        <path d="M18,34 Q14,22 24,18 Q30,16 30,24" fill="none" stroke="var(--rosa-oscuro)" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M42,34 Q46,22 36,18 Q30,16 30,24" fill="none" stroke="var(--morado)" stroke-width="3.4" stroke-linecap="round"/>
+        <circle cx="30" cy="30" r="6.5" fill="var(--hilo)"/>
+        <path d="M18,34 Q22,44 30,44 Q38,44 42,34" fill="none" stroke="var(--rosa)" stroke-width="3.4" stroke-linecap="round"/>
+      </svg>
+      Nudos de Esperanza</a>
+    <button class="nav-toggle" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
     <div class="topnav-links">
       <a href="index.html">Inicio</a>
-      <a href="programas.html">Programas</a>
+      <a href="programas.html" class="active">Programas</a>
+      <a href="manos.html">Manos que Tejen</a>
+      <a href="index.html#bibliografia">Bibliografía</a>
       <a href="#" class="btn btn-primary" onclick="openApoyo(event)" style="padding:9px 20px;">Apoyar</a>
     </div>
   </div>
 </nav>
 
 <!-- ============================================================ -->
-<!-- ENCABEZADO DE LA PAGINA -->
+<!-- ENCABEZADO DE PAGINA -->
 <!-- ============================================================ -->
-<header class="page-header">
+<header class="page-hero">
   <div class="wrap">
-    <a href="index.html" class="back-link">← Volver al inicio</a>
-    <span class="eyebrow">Nuestro trabajo</span>
-    <h1>Todos nuestros programas</h1>
-    <!-- EDITA AQUI: texto de introduccion de la pagina de programas -->
-    <p>Conoce las distintas formas en que acompañamos a las mujeres privadas de libertad y a sus familias, dentro y fuera del centro penitenciario.</p>
+    <span class="eyebrow">Cómo trabajamos</span>
+    <h1 class="section-title">Los tres nudos de nuestro trabajo</h1>
+    <p class="section-lede">
+      Cada nudo representa un punto de sostén: emocional, laboral y familiar. Juntos forman
+      la red que acompaña a cada mujer desde el primer día hasta después de su salida.
+    </p>
   </div>
 </header>
 
 <!-- ============================================================ -->
-<!-- LISTA COMPLETA DE PROGRAMAS -->
+<!-- NUDO 01 -->
 <!-- ============================================================ -->
 <section class="wrap">
-  <div class="nudos-grid">
-
-    <div class="nudo-card c1">
-      <svg class="nudo-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="40" cy="46" r="16" fill="#D98B6E"/>
-        <path d="M28,62 Q40,54 52,62 L52,88 Q40,94 28,88 Z" fill="var(--rosa)"/>
-        <circle cx="82" cy="50" r="16" fill="#B97A55"/>
-        <path d="M70,66 Q82,58 94,66 L94,92 Q82,98 70,92 Z" fill="var(--morado)"/>
-        <path d="M56,72 Q68,60 70,68" fill="none" stroke="var(--rosa-oscuro)" stroke-width="4" stroke-linecap="round"/>
-        <circle cx="63" cy="66" r="4" fill="var(--rosa-oscuro)"/>
-      </svg>
-      <span class="nudo-label">NUDO 01</span>
-      <h3>Acompañamiento emocional</h3>
-      <!-- EDITA AQUI -->
-      <p>Espacios de escucha y contención para procesar el encierro y sostener la salud mental.</p>
+  <div class="detalle-grid">
+    <div>
+      <div class="detalle-num">01</div>
+      <div class="detalle-photo">
+        <img src="https://images.pexels.com/photos/7964374/pexels-photo-7964374.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Manos que se sostienen, símbolo del acompañamiento emocional">
+      </div>
     </div>
-
-    <div class="nudo-card c2">
-      <svg class="nudo-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-        <rect x="26" y="30" width="68" height="52" rx="8" fill="var(--rosa-bebe-tint)"/>
-        <path d="M32,42 L46,56 L32,70 M46,42 L60,56 L46,70 M60,42 L74,56 L60,70" fill="none" stroke="var(--morado)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-        <rect x="26" y="86" width="68" height="10" rx="5" fill="#8B5E3C"/>
-        <circle cx="94" cy="34" r="9" fill="var(--rosa)"/>
-      </svg>
-      <span class="nudo-label">NUDO 02</span>
-      <h3>Formación y oficio</h3>
-      <!-- EDITA AQUI -->
-      <p>Talleres de costura, panadería y manualidades que generan ingresos dentro y fuera del centro.</p>
+    <div>
+      <span class="eyebrow">Acompañamiento emocional</span>
+      <h3>Un espacio seguro para sostenerse</h3>
+      <!-- EDITA AQUI: descripcion extendida del programa -->
+      <p class="section-lede">
+        Ofrecemos terapia grupal e individual, círculos de escucha y talleres de manejo emocional
+        dentro de los centros penitenciarios. El objetivo es que cada mujer procese su situación
+        actual sin perder su dignidad ni su proyecto de vida.
+      </p>
+      <ul class="detalle-list">
+        <li>Sesiones semanales de terapia grupal</li>
+        <li>Acompañamiento individual con psicólogas voluntarias</li>
+        <li>Círculos de escucha entre pares</li>
+        <li>Talleres de regulación emocional y manejo del estrés</li>
+      </ul>
     </div>
+  </div>
 
-    <div class="nudo-card c3">
-      <svg class="nudo-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-        <path d="M60,20 L60,4 M60,20 L48,10 M60,20 L72,10" fill="none" stroke="var(--rosa)" stroke-width="3" stroke-linecap="round"/>
-        <rect x="30" y="30" width="60" height="70" rx="4" fill="none" stroke="var(--color-texto)" stroke-width="4" opacity="0.5"/>
-        <circle cx="60" cy="65" r="24" fill="var(--rosa-bebe-tint)"/>
-        <circle cx="52" cy="80" r="10" fill="#D98B6E"/>
-        <path d="M52,90 Q52,72 66,72 L66,96 Q58,100 52,96 Z" fill="var(--morado)"/>
-        <rect x="62" y="86" width="14" height="10" rx="3" fill="#8B5E3C"/>
-      </svg>
-      <span class="nudo-label">NUDO 03</span>
-      <h3>Reinserción y familia</h3>
-      <!-- EDITA AQUI -->
-      <p>Acompañamos el proceso de salida y la reconstrucción del vínculo familiar y comunitario.</p>
+  <!-- ============================================================ -->
+  <!-- NUDO 02 -->
+  <!-- ============================================================ -->
+  <div class="detalle-grid">
+    <div>
+      <div class="detalle-num">02</div>
+      <div class="detalle-photo">
+        <img src="https://images.pexels.com/photos/5903446/pexels-photo-5903446.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Manos trabajando un oficio, símbolo de la formación laboral">
+      </div>
     </div>
-
-    <div class="nudo-card c2">
-      <svg class="nudo-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-        <line x1="60" y1="18" x2="60" y2="90" stroke="var(--color-texto)" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
-        <line x1="30" y1="34" x2="90" y2="34" stroke="var(--color-texto)" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
-        <path d="M30,34 L18,58 Q30,68 42,58 Z" fill="var(--rosa)"/>
-        <path d="M90,34 L78,58 Q90,68 102,58 Z" fill="var(--morado)"/>
-        <rect x="42" y="90" width="36" height="8" rx="4" fill="#8B5E3C"/>
-        <circle cx="60" cy="22" r="6" fill="var(--rosa-oscuro)"/>
-      </svg>
-      <span class="nudo-label">NUDO 04</span>
-      <h3>Apoyo legal</h3>
-      <!-- EDITA AQUI -->
-      <p>Orientación jurídica y acompañamiento en trámites para conocer y ejercer sus derechos.</p>
+    <div>
+      <span class="eyebrow">Formación y oficio</span>
+      <h3>Un oficio es una puerta hacia la autonomía</h3>
+      <!-- EDITA AQUI: descripcion extendida del programa -->
+      <p class="section-lede">
+        A través de talleres certificados de costura, panadería, tejido y manualidades, las
+        participantes adquieren un oficio que pueden ejercer dentro del centro y continuar
+        después de su liberación. El detalle completo de estos talleres está en
+        <a href="manos.html">Manos que Tejen</a>.
+      </p>
+      <ul class="detalle-list">
+        <li>Talleres de costura y confección básica</li>
+        <li>Panadería y repostería con enfoque de venta</li>
+        <li>Tejido en macramé y bisutería artesanal</li>
+        <li>Certificación de horas y acompañamiento para emprender</li>
+      </ul>
     </div>
+  </div>
 
-    <div class="nudo-card c3">
-      <svg class="nudo-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-        <path d="M60,96 C20,68 24,34 50,30 C58,29 60,40 60,44 C60,40 62,29 70,30 C96,34 100,68 60,96 Z" fill="var(--rosa)"/>
-        <rect x="53" y="50" width="14" height="34" rx="3" fill="var(--rosa-bebe-tint)"/>
-        <rect x="43" y="60" width="34" height="14" rx="3" fill="var(--rosa-bebe-tint)"/>
-      </svg>
-      <span class="nudo-label">NUDO 05</span>
-      <h3>Salud y bienestar</h3>
-      <!-- EDITA AQUI -->
-      <p>Controles de salud física y mental, y espacios de autocuidado dentro del centro.</p>
+  <!-- ============================================================ -->
+  <!-- NUDO 03 -->
+  <!-- ============================================================ -->
+  <div class="detalle-grid">
+    <div>
+      <div class="detalle-num">03</div>
+      <div class="detalle-photo">
+        <img src="https://images.pexels.com/photos/9794718/pexels-photo-9794718.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Manos de madre e hija, símbolo del reencuentro familiar">
+      </div>
     </div>
-
-    <div class="nudo-card c1">
-      <svg class="nudo-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-        <path d="M60,34 Q40,22 20,30 L20,86 Q40,78 60,90 Z" fill="var(--morado)"/>
-        <path d="M60,34 Q80,22 100,30 L100,86 Q80,78 60,90 Z" fill="var(--rosa)"/>
-        <line x1="60" y1="34" x2="60" y2="90" stroke="var(--color-fondo)" stroke-width="2" opacity="0.5"/>
-        <path d="M60,20 L60,34" stroke="var(--rosa-oscuro)" stroke-width="4" stroke-linecap="round"/>
-      </svg>
-      <span class="nudo-label">NUDO 06</span>
-      <h3>Educación y alfabetización</h3>
-      <!-- EDITA AQUI -->
-      <p>Programas para completar estudios básicos y aprender a leer y escribir.</p>
+    <div>
+      <span class="eyebrow">Reinserción y familia</span>
+      <h3>Ningún regreso debería ser en soledad</h3>
+      <!-- EDITA AQUI: descripcion extendida del programa -->
+      <p class="section-lede">
+        Preparamos el proceso de salida junto a la mujer y su familia: mediación de vínculos,
+        orientación laboral y seguimiento post-liberación para reducir la reincidencia y
+        sostener una reinserción real en la comunidad.
+      </p>
+      <ul class="detalle-list">
+        <li>Mediación y reconstrucción del vínculo familiar</li>
+        <li>Orientación para la búsqueda de empleo</li>
+        <li>Seguimiento durante los primeros 12 meses de libertad</li>
+        <li>Red de contención entre egresadas del programa</li>
+      </ul>
     </div>
-
   </div>
 </section>
+
+<hr class="divider wrap">
 
 <!-- ============================================================ -->
 <!-- CTA BAND -->
@@ -136,10 +144,10 @@
 <section class="wrap">
   <div class="cta-band">
     <div>
-      <h2>Tu aporte teje una diferencia</h2>
-      <p>Cada donación sostiene un taller, un acompañamiento, una salida digna.</p>
+      <h2>Sostén uno de estos nudos</h2>
+      <p>Tu aporte puede financiar un ciclo completo de terapia, un taller o un proceso de reinserción.</p>
     </div>
-    <a href="#" class="btn btn-primary" onclick="openApoyo(event)">Ver QR y cuenta para donar</a>
+    <a href="#" class="btn btn-primary" onclick="openApoyo(event)">Ver formas de donar</a>
   </div>
 </section>
 
@@ -148,54 +156,72 @@
 <!-- ============================================================ -->
 <footer>
   <div class="wrap footer-row">
-    <!-- EDITA AQUI: correo o telefono de contacto -->
     <span>Nudos de Esperanza — contacto@nudosdeesperanza.org</span>
     <a href="#" class="btn btn-ghost" onclick="openApoyo(event)">Quiero apoyar</a>
   </div>
 </footer>
 
 <!-- ============================================================ -->
-<!-- MODAL: QR + CUENTA BANCARIA -->
+<!-- MODAL: DONACIONES — pestañas Bolivia / Internacional          -->
+<!-- Debe coincidir exactamente con index.html y manos.html          -->
 <!-- ============================================================ -->
 <div class="modal-overlay" id="apoyoModal" onclick="if(event.target===this) closeApoyo()">
   <div class="modal-box">
     <button class="modal-close" onclick="closeApoyo()" aria-label="Cerrar">&times;</button>
     <span class="eyebrow">Apoya la causa</span>
-    <h2>Escanea o transfiere</h2>
+    <h2>Elige cómo donar</h2>
     <p class="section-lede">Cualquier aporte, grande o pequeño, sostiene nuestros programas.</p>
 
-    <!-- ================================================ -->
-    <!-- ZONA EDITABLE #1: IMAGEN DEL QR                   -->
-    <!-- Guarda tu imagen QR como "qr.png" en esta misma    -->
-    <!-- carpeta. IMPORTANTE: cambia el mismo archivo que   -->
-    <!-- usa index.html, es el mismo qr.png para ambas       -->
-    <!-- paginas.                                            -->
-    <!-- ================================================ -->
-    <div class="qr-box">
-      <img src="qr.png" alt="Código QR para donar" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=&quot;font-size:0.75rem;color:#888;font-family:IBM Plex Mono, monospace; text-align:center;&quot;>Aquí va tu imagen<br>qr.png</span>'">
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="bolivia" type="button">Desde Bolivia</button>
+      <button class="tab-btn" data-tab="internacional" type="button">Desde el exterior</button>
     </div>
 
-    <!-- ================================================ -->
-    <!-- ZONA EDITABLE #2: NUMERO DE CUENTA                -->
-    <!-- IMPORTANTE: esta misma info tambien esta en        -->
-    <!-- index.html — cambia AMBOS archivos igual            -->
-    <!-- ================================================ -->
-    <div class="cuenta-item">
-      <span class="eyebrow">Banco</span>
-      <span class="valor">Banco Unión</span>
+    <div class="tab-panel active" data-tab="bolivia">
+      <!-- ZONA EDITABLE: QR local — debe coincidir con index.html -->
+      <div class="qr-box">
+        <img src="qr.png" alt="Código QR para donar desde Bolivia" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=&quot;font-size:0.75rem;color:#888;font-family:IBM Plex Mono, monospace; text-align:center;&quot;>Aquí va tu imagen<br>qr.png</span>'">
+      </div>
+      <div class="cuenta-item">
+        <span class="eyebrow">Banco</span>
+        <span class="valor">Banco Unión</span>
+      </div>
+      <div class="cuenta-item">
+        <span class="eyebrow">Titular de la cuenta</span>
+        <span class="valor">Fundación Nudos de Esperanza</span>
+      </div>
+      <div class="cuenta-item">
+        <span class="eyebrow">Número de cuenta</span>
+        <span class="valor">0000-0000-0000-0000</span>
+        <button class="copy-btn" data-copy="0000-0000-0000-0000" type="button">Copiar número</button>
+      </div>
+      <p class="modal-note">También puedes donar en efectivo directamente en nuestras oficinas. Escríbenos a contacto@nudosdeesperanza.org para coordinar.</p>
     </div>
-    <div class="cuenta-item">
-      <span class="eyebrow">Titular de la cuenta</span>
-      <span class="valor">Fundación Nudos de Esperanza</span>
+
+    <div class="tab-panel" data-tab="internacional">
+      <!-- ZONA EDITABLE: QR PayPal — debe coincidir con index.html -->
+      <div class="qr-box">
+        <img src="qr-paypal.png" alt="Código QR de PayPal para donar desde el exterior" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=&quot;font-size:0.75rem;color:#888;font-family:IBM Plex Mono, monospace; text-align:center;&quot;>Aquí va tu imagen<br>qr-paypal.png</span>'">
+      </div>
+      <div class="cuenta-item">
+        <span class="eyebrow">Plataforma</span>
+        <span class="valor">PayPal</span>
+      </div>
+      <div class="cuenta-item">
+        <span class="eyebrow">Correo asociado</span>
+        <span class="valor">donaciones@nudosdeesperanza.org</span>
+        <button class="copy-btn" data-copy="donaciones@nudosdeesperanza.org" type="button">Copiar correo</button>
+      </div>
+      <div class="cuenta-item">
+        <span class="eyebrow">Enlace directo</span>
+        <a class="valor" href="https://www.paypal.com/donate" target="_blank" rel="noopener">paypal.com/donate/nudosdeesperanza</a>
+      </div>
+      <p class="modal-note">Ideal para donantes fuera de Bolivia. PayPal convierte automáticamente tu moneda local.</p>
     </div>
-    <div class="cuenta-item">
-      <span class="eyebrow">Número de cuenta</span>
-      <span class="valor">0000-0000-0000-0000</span>
-    </div>
-    <!-- FIN ZONA EDITABLE #2 -->
   </div>
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
+
