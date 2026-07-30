@@ -1,0 +1,5 @@
+# robots.txt — Nudos de Esperanza
+User-agent: *
+Allow: /
+
+Sitemap: https://estarossaxd.github.io/nudos-de-esperanza/sitemap.xml
