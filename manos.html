@@ -72,23 +72,37 @@
   <h2 class="section-title">Cuatro oficios, un mismo propósito</h2>
   <p class="section-lede">Cada taller combina formación técnica con acompañamiento emocional y orientación para la venta de lo producido.</p>
 
-  <div class="galeria-grid">
-    <!-- EDITA AQUI: reemplaza cada src por tus propias fotos de los talleres cuando las tengas -->
-    <div class="galeria-item">
-      <img src="https://images.pexels.com/photos/3838680/pexels-photo-3838680.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Manos bordando sobre tela, taller de costura y confección">
-      <span>Costura</span>
-    </div>
-    <div class="galeria-item">
-      <img src="https://images.pexels.com/photos/5709876/pexels-photo-5709876.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Manos tejiendo con hilo, taller de tejido en macramé">
-      <span>Tejido</span>
-    </div>
-    <div class="galeria-item">
-      <img src="https://images.pexels.com/photos/5903446/pexels-photo-5903446.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Manos amasando pan, taller de panadería y repostería">
-      <span>Panadería</span>
-    </div>
-    <div class="galeria-item">
-      <img src="https://images.pexels.com/photos/16274920/pexels-photo-16274920.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Mano con pulseras artesanales, taller de bisutería">
-      <span>Bisutería</span>
+  <!-- ================================================================ -->
+  <!-- CARRUSEL DE FOTOS: se desliza solo, en bucle infinito.            -->
+  <!-- PARA AGREGAR MAS FOTOS: copia un bloque ".carrusel-item" completo -->
+  <!-- (con su <img> y su <span>) y pegalo dentro de ".carrusel-track",  -->
+  <!-- en cualquier orden. No hace falta tocar el CSS ni el script.js:   -->
+  <!-- el carrusel se ajusta solo a la cantidad de fotos que haya.       -->
+  <!-- Para variar el color del borde superior de cada foto, cambia el   -->
+  <!-- valor de --item-color por uno de estos hilos:                     -->
+  <!-- var(--rosa) · var(--morado) · var(--hilo) · var(--turquesa) ·     -->
+  <!-- var(--terracota) · var(--salvia)                                   -->
+  <!-- ================================================================ -->
+  <div class="carrusel" data-carrusel>
+    <div class="carrusel-track">
+      <div class="carrusel-item" style="--item-color: var(--rosa);">
+        <img src="https://images.pexels.com/photos/3838680/pexels-photo-3838680.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Manos bordando sobre tela, taller de costura y confección" loading="lazy">
+        <span>Costura</span>
+      </div>
+      <div class="carrusel-item" style="--item-color: var(--morado);">
+        <img src="https://images.pexels.com/photos/5709876/pexels-photo-5709876.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Manos tejiendo con hilo, taller de tejido en macramé" loading="lazy">
+        <span>Tejido</span>
+      </div>
+      <div class="carrusel-item" style="--item-color: var(--hilo);">
+        <img src="https://images.pexels.com/photos/5903446/pexels-photo-5903446.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Manos amasando pan, taller de panadería y repostería" loading="lazy">
+        <span>Panadería</span>
+      </div>
+      <div class="carrusel-item" style="--item-color: var(--turquesa);">
+        <img src="https://images.pexels.com/photos/16274920/pexels-photo-16274920.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Mano con pulseras artesanales, taller de bisutería" loading="lazy">
+        <span>Bisutería</span>
+      </div>
+      <!-- Para sumar una quinta foto, duplica uno de los bloques de arriba
+           y cambia el src, el alt, el texto del <span> y --item-color -->
     </div>
   </div>
 </section>

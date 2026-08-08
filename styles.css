@@ -1,18 +1,31 @@
 /* =============================================================
    NUDOS DE ESPERANZA — Hoja de estilos
-   Paleta: rosa polvo + morado suave + toques dorado-hilo
+   Paleta "hilos de esperanza": rosa, morado, dorado, turquesa,
+   terracota y salvia — un hilo de color distinto por cada acento,
+   tejidos sobre una misma base cálida y neutra.
    Tipografia: Fraunces (display) / Work Sans (cuerpo) / IBM Plex Mono (etiquetas)
    ============================================================= */
 
 :root {
-  --rosa: #d97da0;
-  --rosa-oscuro: #a64b71;
-  --rosa-bebe: #f4c6d7;
-  --rosa-bebe-tint: #fbebf0;
-  --morado: #8571a6;
-  --morado-oscuro: #5f4d80;
-  --morado-tint: #eee8f6;
-  --hilo: #c9a15a;
+  /* Paleta "hilos de esperanza": cada color es un hilo distinto,          */
+  /* como en el bordado — diversos pero tejidos sobre la misma base cálida.*/
+  --rosa: #e14b83;
+  --rosa-oscuro: #a11c53;
+  --rosa-bebe: #ffb8d4;
+  --rosa-bebe-tint: #fdeaf2;
+  --morado: #7c4fb0;
+  --morado-oscuro: #472a72;
+  --morado-tint: #efe6fa;
+  --hilo: #dba334;
+  --hilo-oscuro: #8a6118;
+  --hilo-tint: #faf0d8;
+  --terracota: #e2632f;
+  --terracota-tint: #fceae0;
+  --salvia: #3f8f61;
+  --salvia-tint: #e5f3ea;
+  --turquesa: #1f9ba6;
+  --turquesa-oscuro: #0f6e76;
+  --turquesa-tint: #e1f4f5;
   --color-texto: #2c2430;
   --color-texto-suave: #6b5f6c;
   --color-fondo: #fffdfb;
@@ -87,32 +100,43 @@ img { max-width: 100%; display: block; }
   font-size: 1.05rem;
 }
 
-/* Divisor "de hilo": una linea punteada que imita una puntada de bordado */
+/* Divisor "trenza de hilos": una linea de gradiente con los distintos
+   colores de la paleta, como si varios hilos se cruzaran entre secciones */
 .divider {
   border: none;
-  height: 14px;
+  height: 16px;
   margin: 56px auto;
-  background-image: repeating-linear-gradient(
-    to right,
-    var(--rosa-bebe) 0 10px,
-    transparent 10px 22px
-  );
-  background-position: center;
-  background-repeat: repeat-x;
-  background-size: auto 2px;
   position: relative;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .divider::before {
   content: "";
   position: absolute;
+  left: 0; right: 0; top: 50%;
+  transform: translateY(-50%);
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    var(--rosa) 0%,
+    var(--morado) 22%,
+    var(--hilo) 44%,
+    var(--turquesa) 66%,
+    var(--terracota) 88%,
+    var(--salvia) 100%
+  );
+}
+.divider::after {
+  content: "";
+  position: absolute;
   left: 50%;
-  top: -5px;
-  transform: translateX(-50%);
-  width: 9px;
-  height: 9px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: var(--rosa);
+  background: var(--color-fondo);
+  border: 3px solid var(--rosa-oscuro);
 }
 
 /* -------------------------------------------------- */
@@ -251,12 +275,41 @@ img { max-width: 100%; display: block; }
   background: linear-gradient(180deg, var(--morado-tint) 0%, var(--color-fondo) 78%);
   padding: 72px 0 40px;
   overflow: hidden;
+  position: relative;
+}
+/* Manchas de color difuminadas: como hilos de distintos colores flotando
+   detras del titular, para reforzar la idea de diversidad de la paleta */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero::before {
+  width: 320px;
+  height: 320px;
+  background: var(--turquesa);
+  top: -100px;
+  right: 6%;
+}
+.hero::after {
+  width: 280px;
+  height: 280px;
+  background: var(--hilo);
+  bottom: -90px;
+  left: 2%;
 }
 .hero-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 48px;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 .hero-title-main {
   display: block;
@@ -300,7 +353,7 @@ img { max-width: 100%; display: block; }
 /* Estadisticas / impacto (estilo "Alcances")          */
 /* -------------------------------------------------- */
 .stats-band {
-  background: var(--morado-oscuro);
+  background: linear-gradient(120deg, var(--morado-oscuro) 0%, var(--rosa-oscuro) 55%, var(--terracota) 100%);
   color: #fff;
   padding: 56px 0;
   border-radius: var(--radio);
@@ -322,6 +375,11 @@ img { max-width: 100%; display: block; }
   color: var(--rosa-bebe);
   font-weight: 600;
 }
+/* Cada cifra toma el color de un hilo distinto de la paleta */
+.stat-item:nth-child(4n+1) .stat-num { color: var(--rosa-bebe); }
+.stat-item:nth-child(4n+2) .stat-num { color: #f3cf8f; }
+.stat-item:nth-child(4n+3) .stat-num { color: #9fe0da; }
+.stat-item:nth-child(4n+4) .stat-num { color: #b7e6c4; }
 .stat-label {
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.78rem;
@@ -385,11 +443,12 @@ img { max-width: 100%; display: block; }
 .manos-chip {
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.78rem;
+  font-weight: 600;
   background: #fff;
-  border: 1px solid var(--borde);
+  border: 1.5px solid var(--chip-color, var(--borde));
   padding: 7px 14px;
   border-radius: 999px;
-  color: var(--color-texto);
+  color: var(--chip-color, var(--color-texto));
 }
 .manos-art svg { width: 100%; height: auto; }
 
@@ -428,7 +487,7 @@ img { max-width: 100%; display: block; }
 /* CTA band                                            */
 /* -------------------------------------------------- */
 .cta-band {
-  background: linear-gradient(120deg, var(--rosa-oscuro), var(--morado-oscuro));
+  background: linear-gradient(120deg, var(--terracota) 0%, var(--rosa-oscuro) 50%, var(--morado-oscuro) 100%);
   color: #fff;
   border-radius: var(--radio);
   padding: 44px 48px;
@@ -615,6 +674,11 @@ footer .btn-ghost:hover { border-color: var(--rosa-bebe); color: var(--rosa-bebe
   font-size: 3rem;
   color: var(--rosa-bebe);
 }
+/* Cada taller/nudo se identifica con un hilo de color distinto */
+.detalle-grid:nth-of-type(4n+1) .detalle-num { color: var(--rosa); }
+.detalle-grid:nth-of-type(4n+2) .detalle-num { color: var(--morado); }
+.detalle-grid:nth-of-type(4n+3) .detalle-num { color: var(--hilo); }
+.detalle-grid:nth-of-type(4n+4) .detalle-num { color: var(--turquesa); }
 .detalle-grid h3 { font-size: 1.4rem; }
 .detalle-list {
   margin: 16px 0 0;
@@ -636,24 +700,52 @@ footer .btn-ghost:hover { border-color: var(--rosa-bebe); color: var(--rosa-bebe
   background: var(--rosa);
 }
 
-.galeria-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+/* -------------------------------------------------- */
+/* Carrusel de fotos: desliza en bucle infinito y sin  */
+/* cortes. Para sumar mas fotos, solo hay que copiar   */
+/* un ".carrusel-item" dentro de ".carrusel-track" en   */
+/* el HTML — el script.js y este CSS se ajustan solos,  */
+/* sin importar cuantas imagenes haya.                  */
+/* -------------------------------------------------- */
+.carrusel {
+  position: relative;
   margin-top: 32px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
 }
-.galeria-item {
+.carrusel-track {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  width: max-content;
+  will-change: transform;
+  animation: carrusel-desliza var(--carrusel-duration, 32s) linear infinite;
+}
+.carrusel:hover .carrusel-track,
+.carrusel:focus-within .carrusel-track {
+  animation-play-state: paused;
+}
+@keyframes carrusel-desliza {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.carrusel-item {
+  flex: 0 0 auto;
+  width: 260px;
+  aspect-ratio: 4/3;
   background: var(--color-fondo-alt);
   border: 1px solid var(--borde);
+  border-top: 5px solid var(--item-color, var(--rosa));
   border-radius: var(--radio-sm);
-  aspect-ratio: 4/3;
   overflow: hidden;
   position: relative;
+  box-shadow: var(--sombra);
 }
-.galeria-item svg { width: 100%; height: 100%; }
-.galeria-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
-.galeria-item:hover img { transform: scale(1.06); }
-.galeria-item span {
+.carrusel-item svg { width: 100%; height: 100%; }
+.carrusel-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+.carrusel-item:hover img { transform: scale(1.06); }
+.carrusel-item span {
   position: absolute;
   left: 0; right: 0; bottom: 0;
   padding: 10px 14px;
@@ -663,6 +755,9 @@ footer .btn-ghost:hover { border-color: var(--rosa-bebe); color: var(--rosa-bebe
   font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+@media (max-width: 560px) {
+  .carrusel-item { width: 200px; }
 }
 
 /* Miniatura de foto junto a cada nudo/detalle numerado */
@@ -704,7 +799,6 @@ footer .btn-ghost:hover { border-color: var(--rosa-bebe); color: var(--rosa-bebe
   .hero-art, .somos-art { order: -1; max-width: 280px; margin: 0 auto; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .nudos-grid { grid-template-columns: 1fr; }
-  .galeria-grid { grid-template-columns: repeat(2, 1fr); }
   .detalle-grid > div:first-child { display: flex; align-items: center; gap: 16px; }
   .detalle-photo { width: 120px; flex-shrink: 0; margin-top: 0; }
   .cta-band { flex-direction: column; align-items: flex-start; }
@@ -731,11 +825,16 @@ footer .btn-ghost:hover { border-color: var(--rosa-bebe); color: var(--rosa-bebe
   .testimonio-mark { font-size: 3rem; }
   .cta-band, .manos-band { padding: 32px 24px; }
   .modal-box { padding: 26px; }
-  .galeria-grid { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
+  .carrusel-track {
+    animation: none !important;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+  }
+  .carrusel-item { scroll-snap-align: start; }
 }
 
 :focus-visible {
